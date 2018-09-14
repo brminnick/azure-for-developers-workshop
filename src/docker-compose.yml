@@ -1,0 +1,32 @@
+version: "3.0"
+services:
+  mssql:
+    image: microsoft/mssql-server-linux:latest
+    container_name: mssql
+    ports:
+      - 1433:1433
+    volumes:
+      - /var/opt/mssql
+      - ./database/sql:/usr/src/app
+    # bash will be executed from that path, our scripts folder
+    working_dir: /usr/src/app
+    # run the entrypoint.sh that will import the data AND
+    command: sh -c ' chmod +x ./start.sh; ./start.sh & /opt/mssql/bin/sqlservr;'
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: P@55w0rd
+
+  hotelsweb:
+    depends_on:
+      - mssql
+    image: hotelsweb
+    build:
+      context: ./hotelsweb
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - UseLocalSql=true
+      - ConnectionStrings__LocalConnection=Server=tcp:mssql,1433;Initial Catalog=hotels;User ID=SA;Password=P@55w0rd;MultipleActiveResultSets=true
+    ports:
+      - 5000:80

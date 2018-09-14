@@ -1,0 +1,27 @@
+@page
+@model hotelsweb.Pages.Hotels.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+@{
+    Layout = "_Layout";
+}
+
+<h2>Hotels</h2>
+
+<div class="card-columns">
+@foreach (var item in Model.Hotels) {
+<div class="card">
+  <img class="card-img-top" src="/images/@item.ImageNum" width="489" alt="Beautiful Hotel">
+    <div class="card-body">
+      <h5 class="card-title">@item.Name</h5>
+      <p class="card-text">@item.Address<br />@item.City, @item.Country</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Rated: @item.Rating Stars</small>
+      <small class="text-muted" style="float: right; font-weight:bold">$@item.StarterPricePerNight/Day</small>
+    </div>
+</div>
+}
+</div>
