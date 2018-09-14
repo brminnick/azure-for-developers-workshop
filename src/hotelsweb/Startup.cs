@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
+using System.Security.Principal;
 using System.Threading.Tasks;
 using hotelsweb.Models;
 using Microsoft.AspNetCore.Builder;
@@ -50,6 +52,21 @@ namespace hotelsweb
         app.UseExceptionHandler("/Error");
         app.UseHsts();
       }
+
+      app.Use(async (context, next) =>
+      {
+        if (context.Request.Headers.ContainsKey("X-MS-CLIENT-PRINCIPAL-ID"))
+        {
+          context.Request.Headers.TryGetValue("x-ms-client-principal-id", out var principalId);
+          context.Request.Headers.TryGetValue("x-ms-client-principal-name", out var princinpalName);
+          var claims = new Claim[]
+          {
+            new Claim(ClaimTypes.NameIdentifier, principalId),
+            new Claim(ClaimTypes.Name, princinpalName)
+          };
+          context.User = new GenericPrincipal(new GenericIdentity(principalId), roles: null);
+        }
+      });
 
       app.UseHttpsRedirection();
       app.UseStaticFiles();
