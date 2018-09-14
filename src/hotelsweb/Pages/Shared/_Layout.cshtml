@@ -30,6 +30,11 @@
       <li class="nav-item active">
         <a class="nav-link" href="/Hotels">Hotels <span class="sr-only">(current)</span></a>
       </li>
+      @if (!string.IsNullOrEmpty(this.User?.Identity?.Name)) {
+        <li class="nav-item active">
+            Welcome this.User.Identity.Name!
+        </li>
+      }
     </ul>
   </div>
         </nav>

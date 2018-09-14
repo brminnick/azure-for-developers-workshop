@@ -55,16 +55,10 @@ namespace hotelsweb
 
       app.Use(async (context, next) =>
       {
-        if (context.Request.Headers.ContainsKey("X-MS-CLIENT-PRINCIPAL-ID"))
+        context.Request.Headers.TryGetValue("x-ms-client-principal-name", out var principalName);
+        if (!string.IsNullOrEmpty(principalName))
         {
-          context.Request.Headers.TryGetValue("x-ms-client-principal-id", out var principalId);
-          context.Request.Headers.TryGetValue("x-ms-client-principal-name", out var princinpalName);
-          var claims = new Claim[]
-          {
-            new Claim(ClaimTypes.NameIdentifier, principalId),
-            new Claim(ClaimTypes.Name, princinpalName)
-          };
-          context.User = new GenericPrincipal(new GenericIdentity(principalId), roles: null);
+          context.User = new GenericPrincipal(new GenericIdentity(principalName), roles: null);
         }
       });
 
