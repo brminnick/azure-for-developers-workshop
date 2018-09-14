@@ -32,7 +32,7 @@
       </li>
       @if (!string.IsNullOrEmpty(this.User?.Identity?.Name)) {
         <li class="navbar-text">
-            [Welcome @this.User.Identity.Name]
+            &nbsp;&nbsp;&nbsp; Welcome @this.User.Identity.Name! [<a href="/.auth/logout?post_logout_redirect_uri=/">Logout</a>]
         </li>
       }
     </ul>
