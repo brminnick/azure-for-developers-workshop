@@ -53,13 +53,14 @@ namespace hotelsweb
         app.UseHsts();
       }
 
-      app.Use(async (context, next) =>
+      app.Use((context, next) =>
       {
         context.Request.Headers.TryGetValue("x-ms-client-principal-name", out var principalName);
         if (!string.IsNullOrEmpty(principalName))
         {
           context.User = new GenericPrincipal(new GenericIdentity(principalName), roles: null);
         }
+        return next();
       });
 
       app.UseHttpsRedirection();
