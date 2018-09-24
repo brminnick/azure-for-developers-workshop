@@ -1,9 +1,9 @@
 # azure-for-developers-workshop
 
-## TODO 
+## TODO
 
 * Add links to labs per section
-* Add links to presentations 
+* Add links to presentations
 * Add links to docs relevant to outline items
 
 ## Agenda
@@ -36,7 +36,7 @@ TBD: link to lab
 
 * Intro to serverless
 * Overview of serverless in Azure
-* Lab 
+* Lab
 
 ### Azure Security ([Brandon Minnick](https://twitter.com/TheCodeTraveler))
 
@@ -44,8 +44,8 @@ TBD: link to lab
 * Authentication for Azure App Service
 * Key Vault
 
-### Azure and Mobile (Brandon) 
+### Azure and Mobile (Brandon)
 
-* Stuff 
+* Stuff
 
 ### Conclusion (Team)
