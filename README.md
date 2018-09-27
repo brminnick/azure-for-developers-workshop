@@ -18,13 +18,15 @@ This is a general overview of the workshop agenda.
 * Portal
 * Cloud shell
 
-TBD: link to lab
+[View Module](./presentation/01-Intro.pptx)
 
 ### Azure Storage (Jeremy)
 
 * Storage accounts
-* Files
 * Blobs
+* Files
+
+[View Module](./presentation/02-Intro.pptx)
 
 ### Hosting in Azure ([Anthony Chu](https://twitter.com/@anthonychu))
 
