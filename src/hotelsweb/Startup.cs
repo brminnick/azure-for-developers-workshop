@@ -36,7 +36,14 @@ namespace hotelsweb
 
 
             services.AddMvc();
-            services.AddDbContext<HotelsContext>(options => options.UseSqlServer(GetConnectionString()));
+            services.AddDbContext<HotelsContext>(options => options.UseSqlServer(GetConnectionString(),
+                sqlServerOptionsAction: sqlOptions =>
+                {
+                    sqlOptions.EnableRetryOnFailure(
+                    maxRetryCount: 3,
+                    maxRetryDelay: TimeSpan.FromSeconds(30),
+                    errorNumbersToAdd: null);
+                }));
             services.AddScoped<ITextAnalyticsClient>(factory =>
             {
                 var apiKey = Configuration["SentimentAnalysis:ApiKey"];
