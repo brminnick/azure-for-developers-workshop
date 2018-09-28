@@ -1,0 +1,13 @@
+﻿@page
+@model Review.IndexModel
+<div class="text-center">
+    <h1 class="display-4">Leave a Review</h1>
+    <p>We hope you enjoyed your stay</p>
+    <form method="post">
+        <input type="text" name="sentimentText">
+        <input type="submit">
+    </form>
+    <p/>
+    <p>@Model.ReviewResponse</p>
+    <h1 class="display-4">@Model.SentimentEmoji</h1>
+</div>
