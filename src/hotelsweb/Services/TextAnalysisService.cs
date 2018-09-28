@@ -3,26 +3,25 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
+using hotelsweb.Abstractions;
+
 using Microsoft.Azure.CognitiveServices.Language.TextAnalytics;
 using Microsoft.Azure.CognitiveServices.Language.TextAnalytics.Models;
-using Microsoft.Rest;
 
-namespace hotelsweb
+namespace hotelsweb.Services
 {
-    static class TextAnalysisService
+    class TextAnalysisService : ITextAnalysisService
     {
-        #region Constant Fields
-        readonly static Lazy<TextAnalyticsClient> _textAnalyticsApiClientHolder = new Lazy<TextAnalyticsClient>(() =>
-            new TextAnalyticsClient(new ApiKeyServiceClientCredentials(TextAnalysisConstants.SentimentKey)) { Endpoint = TextAnalysisConstants.BaseUrl });
-
+        #region Constructors
+        public TextAnalysisService(ITextAnalyticsClient textAnalyticsClient) => TextAnalyticsApiClient = (TextAnalyticsClient)textAnalyticsClient;
         #endregion
 
         #region Properties
-        static TextAnalyticsClient TextAnalyticsApiClient => _textAnalyticsApiClientHolder.Value;
+        TextAnalyticsClient TextAnalyticsApiClient { get; }
         #endregion
 
         #region Methods
-        public static async Task<double?> GetSentiment(string text)
+        public async Task<double?> GetSentiment(string text)
         {
             var sentimentDocument = new MultiLanguageBatchInput(new List<MultiLanguageInput> { { new MultiLanguageInput(id: "1", text: text) } });
 
@@ -39,7 +38,7 @@ namespace hotelsweb
             return documentResult?.Score;
         }
 
-        public static async Task<Dictionary<string, double?>> GetSentiment(List<string> textList)
+        public async Task<Dictionary<string, double?>> GetSentiment(List<string> textList)
         {
             var textIdDictionary = new Dictionary<string, string>();
             var multiLanguageBatchInput = new MultiLanguageBatchInput(new List<MultiLanguageInput>());
@@ -67,25 +66,6 @@ namespace hotelsweb
                 resultsDictionary.Add(textIdDictionary[result.Id], result?.Score);
 
             return resultsDictionary;
-        }
-        #endregion
-
-        #region Classes
-        class ApiKeyServiceClientCredentials : ServiceClientCredentials
-        {
-            readonly string _subscriptionKey;
-
-            public ApiKeyServiceClientCredentials(string subscriptionKey) => _subscriptionKey = subscriptionKey;
-
-            public override Task ProcessHttpRequestAsync(System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken)
-            {
-                if (request is null)
-                    throw new ArgumentNullException(nameof(request));
-
-                request.Headers.Add("Ocp-Apim-Subscription-Key", _subscriptionKey);
-
-                return Task.CompletedTask;
-            }
         }
         #endregion
     }

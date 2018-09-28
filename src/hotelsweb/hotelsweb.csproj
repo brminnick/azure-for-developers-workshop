@@ -14,9 +14,14 @@
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="Constants\" />
-    <Folder Include="Pages\Sentiment\" />
+    <Folder Include="Pages\Review\" />
+    <Folder Include="Abstractions\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Pages\SentimentPage\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Services\TextAnalyticsClient.cs" />
+    <Compile Remove="Constants\TextAnalysisConstants.cs" />
   </ItemGroup>
 </Project>
