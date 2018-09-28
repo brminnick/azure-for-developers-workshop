@@ -8,6 +8,15 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.Azure.CognitiveServices.Language.TextAnalytics" Version="2.1.0-preview" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Pages\Sentiment\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Pages\SentimentPage\Index.cshtml" />
+  </ItemGroup>
 </Project>

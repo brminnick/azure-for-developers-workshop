@@ -1,0 +1,13 @@
+﻿@page
+@model Sentiment.IndexModel
+<div class="text-center">
+    <h1 class="display-4">Analyze Sentiment</h1>
+    <p>Enter the text to analyze below</p>
+    <form method="post">
+        <input type="text" name="sentimentText">
+        <input type="submit">
+    </form>
+    <p/>
+    <p>@Model.SentimentText</p>
+    <h1 class="display-4">@Model.SentimentEmoji</h1>
+</div>
