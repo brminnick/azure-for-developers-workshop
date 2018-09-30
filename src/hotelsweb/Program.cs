@@ -12,10 +12,10 @@ namespace hotelsweb
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            CreateWebHostBuilder(args).Build().Run();
         }
 
-        public static IWebHost BuildWebHost(string[] args)
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args)
         {
             return WebHost.CreateDefaultBuilder(args)
                     .ConfigureAppConfiguration((ctx, builder) =>
@@ -29,8 +29,7 @@ namespace hotelsweb
                             builder.AddAzureKeyVault(keyVaultEndpoint, keyVaultClient, new DefaultKeyVaultSecretManager());
                         }
                     })
-                    .UseStartup<Startup>()
-                    .Build();
+                    .UseStartup<Startup>();
         }
 
         static string GetKeyVaultEndpoint() => Environment.GetEnvironmentVariable("KeyVaultEndpoint");
