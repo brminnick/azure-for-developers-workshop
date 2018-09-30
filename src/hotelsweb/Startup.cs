@@ -12,17 +12,20 @@ using Microsoft.Rest;
 using hotelsweb.Abstractions;
 using hotelsweb.Services;
 using Microsoft.Azure.CognitiveServices.Language.TextAnalytics;
+using Microsoft.Extensions.Logging;
 
 namespace hotelsweb
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, ILogger<Startup> logger)
         {
             Configuration = configuration;
+            Logger = logger;
         }
 
         public IConfiguration Configuration { get; }
+        public ILogger Logger { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -54,6 +57,7 @@ namespace hotelsweb
                 return new TextAnalyticsClient(credentials) { Endpoint = baseUrl };
             });
             services.AddScoped<ITextAnalysisService, TextAnalysisService>();
+            services.AddScoped<ReviewsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
