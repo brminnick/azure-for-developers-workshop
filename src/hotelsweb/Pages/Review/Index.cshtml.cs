@@ -3,33 +3,68 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 using hotelsweb.Abstractions;
+using hotelsweb.Services;
+using System;
+using Microsoft.Extensions.Logging;
 
 namespace hotelsweb.Pages.Review
 {
     public class IndexModel : PageModel
     {
-        readonly ITextAnalysisService _textAnalysisService;
+        private readonly ReviewsService _reviewsService;
+        private readonly ITextAnalysisService _textAnalysisService;
+        private readonly ILogger _logger;
 
-        public IndexModel(ITextAnalysisService textAnalysisService) => _textAnalysisService = textAnalysisService;
+        public IndexModel(ITextAnalysisService textAnalysisService, 
+            ReviewsService reviewsService,
+            ILogger<IndexModel> logger)
+        {
+            _reviewsService = reviewsService;
+            _textAnalysisService = textAnalysisService;
+            _logger = logger;
+        }
 
-        [BindProperty]
         public string SentimentEmoji { get; set; }
-        [BindProperty]
         public string ReviewResponse { get; set; }
+        [BindProperty]
+        public string ReviewText { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
+            await SubmitReview();
+            await AnalyzeSentiment();
+            return Page();
+        }
+
+        private async Task SubmitReview()
+        {
+            try
+            {
+                await _reviewsService.SubmitAsync(ReviewText);
+            }
+            catch(Exception ex)
+            {
+                _logger.LogWarning("Unable to submit review: " + ex.Message);
+            }
+        }
+
+        private async Task AnalyzeSentiment()
+        {
             ReviewResponse = SentimentEmoji = string.Empty;
 
-            var sentimentText = Request.Form["sentimentText"];
-            var sentimentScore = await _textAnalysisService.GetSentiment(sentimentText);
+            try
+            {
+                var sentimentScore = await _textAnalysisService.GetSentiment(ReviewText);
 
-            var response = GetResponse(sentimentScore);
+                var response = GetResponse(sentimentScore);
 
-            ReviewResponse = response.Response;
-            SentimentEmoji = response.Emoji;
-
-            return Page();
+                ReviewResponse = response.Response;
+                SentimentEmoji = response.Emoji;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning("Unable to retrieve sentiment: " + ex.Message);
+            }
         }
 
         (string Emoji, string Response) GetResponse(double? sentimentScore)
