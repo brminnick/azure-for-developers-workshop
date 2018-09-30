@@ -36,9 +36,16 @@ namespace hotelsweb.Pages.Review
             return Page();
         }
 
-        private Task SubmitReview()
+        private async Task SubmitReview()
         {
-            return _reviewsService.SubmitAsync(ReviewText);
+            try
+            {
+                await _reviewsService.SubmitAsync(ReviewText);
+            }
+            catch(Exception ex)
+            {
+                _logger.LogWarning("Unable to submit review: " + ex.Message);
+            }
         }
 
         private async Task AnalyzeSentiment()
@@ -54,7 +61,7 @@ namespace hotelsweb.Pages.Review
                 ReviewResponse = response.Response;
                 SentimentEmoji = response.Emoji;
             }
-            catch (ArgumentException ex)
+            catch (Exception ex)
             {
                 _logger.LogWarning("Unable to retrieve sentiment: " + ex.Message);
             }
