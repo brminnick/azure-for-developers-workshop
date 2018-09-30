@@ -49,8 +49,8 @@ namespace hotelsweb
                 }));
             services.AddScoped<ITextAnalyticsClient>(factory =>
             {
-                var apiKey = Configuration["SentimentAnalysis:ApiKey"];
-                var baseUrl = Configuration["SentimentAnalysis:BaseUrl"];
+                var apiKey = Configuration["TextAnalyticsApiKey"];
+                var baseUrl = Configuration["TextAnalyticsBaseUrl"];
 
                 var credentials = new ApiKeyServiceClientCredentials(apiKey);
 
