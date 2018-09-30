@@ -3,29 +3,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
-using hotelsweb.Abstractions;
-
 using Microsoft.Azure.CognitiveServices.Language.TextAnalytics;
 using Microsoft.Azure.CognitiveServices.Language.TextAnalytics.Models;
 
 namespace hotelsweb.Services
 {
-    class TextAnalysisService : ITextAnalysisService
+    public class TextAnalysisService
     {
-        #region Constructors
-        public TextAnalysisService(ITextAnalyticsClient textAnalyticsClient) => TextAnalyticsApiClient = (TextAnalyticsClient)textAnalyticsClient;
-        #endregion
+        readonly TextAnalyticsClient _textAnalyticsApiClient;
 
-        #region Properties
-        TextAnalyticsClient TextAnalyticsApiClient { get; }
-        #endregion
+        public TextAnalysisService(TextAnalyticsClient textAnalyticsClient) => _textAnalyticsApiClient = textAnalyticsClient;
 
-        #region Methods
         public async Task<double?> GetSentiment(string text)
         {
             var sentimentDocument = new MultiLanguageBatchInput(new List<MultiLanguageInput> { { new MultiLanguageInput(id: "1", text: text) } });
 
-            var sentimentResults = await TextAnalyticsApiClient.SentimentAsync(sentimentDocument).ConfigureAwait(false);
+            var sentimentResults = await _textAnalyticsApiClient.SentimentAsync(sentimentDocument).ConfigureAwait(false);
 
             if (sentimentResults?.Errors?.Any() ?? false)
             {
@@ -52,7 +45,7 @@ namespace hotelsweb.Services
                 multiLanguageBatchInput.Documents.Add(new MultiLanguageInput(id: textGuidString, text: text));
             }
 
-            var sentimentResults = await TextAnalyticsApiClient.SentimentAsync(multiLanguageBatchInput).ConfigureAwait(false);
+            var sentimentResults = await _textAnalyticsApiClient.SentimentAsync(multiLanguageBatchInput).ConfigureAwait(false);
 
             if (sentimentResults?.Errors?.Any() ?? false)
             {
@@ -67,6 +60,5 @@ namespace hotelsweb.Services
 
             return resultsDictionary;
         }
-        #endregion
     }
 }

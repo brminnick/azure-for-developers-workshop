@@ -2,17 +2,16 @@ using System;
 using System.Security.Principal;
 using System.Threading.Tasks;
 using hotelsweb.Models;
+using hotelsweb.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Azure.CognitiveServices.Language.TextAnalytics;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Rest;
-using hotelsweb.Abstractions;
-using hotelsweb.Services;
-using Microsoft.Azure.CognitiveServices.Language.TextAnalytics;
 using Microsoft.Extensions.Logging;
+using Microsoft.Rest;
 
 namespace hotelsweb
 {
@@ -47,7 +46,7 @@ namespace hotelsweb
                     maxRetryDelay: TimeSpan.FromSeconds(30),
                     errorNumbersToAdd: null);
                 }));
-            services.AddScoped<ITextAnalyticsClient>(factory =>
+            services.AddScoped(factory =>
             {
                 var apiKey = Configuration["TextAnalyticsApiKey"];
                 var baseUrl = Configuration["TextAnalyticsBaseUrl"];
@@ -56,7 +55,7 @@ namespace hotelsweb
 
                 return new TextAnalyticsClient(credentials) { Endpoint = baseUrl };
             });
-            services.AddScoped<ITextAnalysisService, TextAnalysisService>();
+            services.AddScoped<TextAnalysisService>();
             services.AddScoped<ReviewsService>();
         }
 

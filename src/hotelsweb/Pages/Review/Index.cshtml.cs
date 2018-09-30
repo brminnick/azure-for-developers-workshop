@@ -1,10 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc;
+﻿using System;
 using System.Threading.Tasks;
-
-using hotelsweb.Abstractions;
 using hotelsweb.Services;
-using System;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
 namespace hotelsweb.Pages.Review
@@ -12,10 +10,10 @@ namespace hotelsweb.Pages.Review
     public class IndexModel : PageModel
     {
         private readonly ReviewsService _reviewsService;
-        private readonly ITextAnalysisService _textAnalysisService;
+        private readonly TextAnalysisService _textAnalysisService;
         private readonly ILogger _logger;
 
-        public IndexModel(ITextAnalysisService textAnalysisService, 
+        public IndexModel(TextAnalysisService textAnalysisService,
             ReviewsService reviewsService,
             ILogger<IndexModel> logger)
         {
@@ -24,10 +22,10 @@ namespace hotelsweb.Pages.Review
             _logger = logger;
         }
 
-        public string SentimentEmoji { get; set; }
-        public string ReviewResponse { get; set; }
         [BindProperty]
         public string ReviewText { get; set; }
+        public string SentimentEmoji { get; set; }
+        public string ReviewResponse { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -42,7 +40,7 @@ namespace hotelsweb.Pages.Review
             {
                 await _reviewsService.SubmitAsync(ReviewText);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 _logger.LogWarning("Unable to submit review: " + ex.Message);
             }
@@ -67,7 +65,7 @@ namespace hotelsweb.Pages.Review
             }
         }
 
-        (string Emoji, string Response) GetResponse(double? sentimentScore)
+        private (string Emoji, string Response) GetResponse(double? sentimentScore)
         {
             switch (sentimentScore)
             {
