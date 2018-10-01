@@ -45,22 +45,19 @@ This is a general overview of the workshop agenda.
 * Walkthrough an example DevOps pipeline
     * Doesn't need to be a hands-on lab
 
-### 6 - Cognitive Services ([Brandon Minnick](https://twitter.com/TheCodeTraveler))
+### 6 - [Cognitive Services](/labs/06-cognitive_services.md) ([Brandon Minnick](https://twitter.com/TheCodeTraveler))
 
-* Add Cognitive Services to Anthony's App Service (if possible)
-     * Can always demo existing Xamarin apps I've created that use Cognitive Services
+In this section we will add Sentiment Analysis to the reviews for our Hotels 360 app. For this, we will be leveraging the [Text Analytics API hosted by Cognitive Services](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=TechBash-github-bramin)
 
-### 7 - Azure Security (Brandon)
+### 7 - [Azure Security](/labs/07-azure_security.md) ([Brandon Minnick](https://twitter.com/TheCodeTraveler))
 
-* Azure Security overview
-    * Walkthrough [Tanya's Microsoft Learn Module](https://docs.microsoft.com/en-us/learn/modules/top-5-security-items-to-consider/) as an intro to security
-    * Make real-time updates to Anthoy's deployed App Service
-* Authentication for Azure App Service
-    * Add Auth to Anthony's App Service
-* Key Vault
-    * Replace passwords in Anthony's App Service using Key Vault
+In this section we will learn how to leverage the security tools available in Azure.
 
-### 8 - Azure and Mobile (Brandon)
+We'll start by learning more about [Azure Security Center](https://azure.microsoft.com/services/security-center/?WT.mc_id=TechBash-github-bramin) and how to leverage its recommendations to add extra layers of security to our app service.
+
+Next, we'll move the secrets out our code and into [Azure Key Vault](https://azure.microsoft.com/services/key-vault/?WT.mc_id=TechBash-github-bramin). Key Vault leverages HSMs (hardware security modules) to help us avoid storing secrets in our source code.
+
+### 8 - [Azure and Mobile]((/labs/08-azure_and_mobile.md)) (Brandon)
 
 * High level overview of how .NET developers can leverage Xamarin
 
