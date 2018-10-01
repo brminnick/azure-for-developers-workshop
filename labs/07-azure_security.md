@@ -221,3 +221,11 @@
 21. On the **Authentication / Authorization** page, select **Save**
 
 ![Save Auth](https://user-images.githubusercontent.com/13558917/46318736-85ced300-c5a5-11e8-9c36-42bf0ff6278e.png)
+
+## 10. Verify Auth (Azure)
+
+1. Build/Deploy `hotelsweb.csproj` to the Azure Web App instance created earlier
+2. Navigate to the Hotels360 website
+3. On the Hotels360 website, ensure you are prompted with a Microsoft login
+4. Enter your Microsoft user/name password
+5. Grant login access to your app
