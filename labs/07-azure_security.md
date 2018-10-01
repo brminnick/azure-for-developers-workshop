@@ -158,4 +158,66 @@
 
 ## 9. Add Authentication
 
-_tbd_
+1. Navigate to the [Azure Portal](https://portal.azure.com/?WT.mc_id=TechBash-github-bramin)
+2. On the Azure Portal, navigate to your App Service resource
+3. On the **App Services Overview** page, locate the App Service URL
+    - We will use this URL later
+
+![App Service Url](https://user-images.githubusercontent.com/13558917/46318766-9aab6680-c5a5-11e8-9a98-b7d332124cb5.png)
+
+4. On the **App Services Overview** page, on the left-hand menu, select **Authentication / Authorization**
+5. On the **Authentication / Authorization** page, make the following selections:
+    - **App Service Authentication**: On
+    - **Action to take when request is not authenticated**: Log in with Microsoft Account
+6. On the On the **Authentication / Authorization** page, select **Save**
+
+![Microsoft Auth Settings](https://user-images.githubusercontent.com/13558917/46318829-c595ba80-c5a5-11e8-9503-f389ce0ffbc0.png)
+
+7. On the **Authentication / Authorization** page, select **Microsoft Not Configured**
+8. On the **Microsoft Account Authentication Settings** page, click **Tese settings allow users to sign in with Microsoft Account. Click here to learn more.**
+
+![Microsoft App Setup](https://user-images.githubusercontent.com/13558917/46318735-85ced300-c5a5-11e8-9f5b-dd365f0b5ee3.png)
+
+9. On the **How to configure your App Service application to use Microsoft Account login** page, click **[My Applications](http://go.microsoft.com/fwlink/p/?LinkId=262039)**
+10. On the **Application Registration Portal**, login with your Microsoft username/password
+
+![Application Registration Portal Login](https://user-images.githubusercontent.com/13558917/46318734-85ced300-c5a5-11e8-9512-f105e11e71a5.png)
+
+11. On the **My applications** page, select **Add an app**
+
+![Add an app](https://user-images.githubusercontent.com/13558917/46318742-86676980-c5a5-11e8-8086-e08f0033d377.png)
+
+12. On the **Register applications** page, create a name for your app
+13. On the **Register applications** page, select **Create**
+
+![Register you application](https://user-images.githubusercontent.com/13558917/46318742-86676980-c5a5-11e8-8086-e08f0033d377.png)
+
+14. On the **App Registration** page, select **Generate New Password**
+
+![Generate new password](https://user-images.githubusercontent.com/13558917/46318740-86676980-c5a5-11e8-9132-3c6f6430c076.png)
+
+15. On the **New password generated** popup, copy the password and paste it in a text file on your local computer
+    - **Note:** We will use this password later, but you will be unable to access the password after clicking **Ok** and closing the popup
+16. On the **New password generated** popup, select **Ok**
+
+![App Password](https://user-images.githubusercontent.com/13558917/46318931-2ae9ab80-c5a6-11e8-88c7-2c0bbabf8718.png)
+
+17. On the **Register applications** page, in **Home page URL**, locate the **Application Id**
+    - **Note:** We will use Application Id later
+17. On the **Register applications** page, in **Home page URL**, paste the formatted App Service URL
+    - **Formatted App Service Url:** `[Your App Service Url]/.auth/login/microsoftaccount/callback`
+    - E.g., https://minnickhotelsweb.azurewebsites.net/.auth/login/microsoftaccount/callback
+18. On the **Register applications** page, click **Save**
+
+![Register Application](https://user-images.githubusercontent.com/13558917/46318738-85ced300-c5a5-11e8-9eeb-57ea23c15c56.png)
+
+19. On the **Azure Portal** on the **Microsoft Account Authentication Settings** page, enter the following values:
+    - **Client Id:** [Your Microsoft Application Id]
+    - **Client Secret:** [Your Microsoft Application Password]
+20. On the **Microsoft Account Authentication Settings** page, select **Ok**
+
+![Microsoft Auth Settings](https://user-images.githubusercontent.com/13558917/46318737-85ced300-c5a5-11e8-9095-44b1c0f226a8.png)
+
+21. On the **Authentication / Authorization** page, select **Save**
+
+![Save Auth](https://user-images.githubusercontent.com/13558917/46318736-85ced300-c5a5-11e8-9c36-42bf0ff6278e.png)
