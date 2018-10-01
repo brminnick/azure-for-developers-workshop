@@ -57,7 +57,7 @@ We'll start by learning more about [Azure Security Center](https://azure.microso
 
 Next, we'll move the secrets out our code and into [Azure Key Vault](https://azure.microsoft.com/services/key-vault/?WT.mc_id=TechBash-github-bramin). Key Vault leverages HSMs (hardware security modules) to help us avoid storing secrets in our source code.
 
-### [8 - Azure and Mobile]((/labs/08-azure_and_mobile.md)) ([Brandon Minnick](https://twitter.com/TheCodeTraveler))
+### [8 - Azure and Mobile]((/labs/08-azure_and_mobile.md)) (Brandon)
 
 * High level overview of how .NET developers can leverage Xamarin
 

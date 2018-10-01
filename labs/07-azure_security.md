@@ -17,8 +17,13 @@
 2. On the Azure Portal, on the left-hand menu, select **Al services**
 3. In the **All services** window, in the **Filter** bar at the top, type **Security**
 4. In the **All services** window, select **Security Center**
+
+![All Resources, Security Center](https://user-images.githubusercontent.com/13558917/46313382-bc9ced00-c595-11e8-8cb7-73f0d9a44fdc.png)
+
 5. In  **Security Center** on the left hand menu, select **Recommendations**
 6. Let's walk through some of the recommendations together
+
+![Security Center Recommendations](https://user-images.githubusercontent.com/13558917/46313383-bc9ced00-c595-11e8-9ee0-0e612d04fedb.png)
 
 ## 3. Enable App Service Managed Service Identity
 
@@ -28,13 +33,21 @@
 4. On the **Managed service identity** page, select **On**
 5. On the **Managed service identity** page, select **Save**
 
+![Manages Service Identity, App Service](https://user-images.githubusercontent.com/13558917/46313381-bc9ced00-c595-11e8-9bd7-cd2aecbb18e5.png)
+
 ## 4. Create Azure Key Vault Resource
 
 1. Navigate to the [Azure Portal](https://portal.azure.com/?WT.mc_id=TechBash-github-bramin)
 2. In the Azure Portal, select **+Create a Resource**
 3. In the **New** window, type **Key Vault** into the search bar
+
+![Key Vault Search](https://user-images.githubusercontent.com/13558917/46315668-08529500-c59c-11e8-95fd-33a90665ace7.png)
+
 4. From the search results, select **Key Vault**
 5. On the **Key Vault** page, select **Create**
+
+![Create Key Vault Resource](https://user-images.githubusercontent.com/13558917/46315676-08eb2b80-c59c-11e8-8108-44100f45a54e.png)
+
 6. On the **Create key vault** page, create a unique key vault name for **Name:**
 7. On the **Create key vault** page, select your Azure subscription
 8. On the **Create key vault** page, select the location closest to you 
@@ -45,6 +58,9 @@
 13. In the **Principal** page, enter the name of your app service in the search bar
 14. In the **Principal** page, select your app service
 15. In the **Principal** page, click **Select**
+
+![Add Principal](https://user-images.githubusercontent.com/13558917/46315675-08eb2b80-c59c-11e8-8854-838b8a2efc34.png)
+
 16. On the **Add new policy** page, add the following **Secret Permissions**:
     - **Note:** Ensure you are modifying **Secret Permissions**, not Key or Certificate permissions
     - **Get**
@@ -52,9 +68,14 @@
 17. On the **Add new policy** page, select **Ok**
 18. On the **Access policies** page, select **Ok**
 19. On the **Create key vault page**, select **Create**
+
+![Create Key Vault](https://user-images.githubusercontent.com/13558917/46315672-08529500-c59c-11e8-9071-62d4be8ac41f.png)
+
 20. On the Azure Portal, select the bell-shaped notification icon
 21. Stand by while the Notifications window says **Deployment in progress...**
 22. Once the deployment has finished, on the Notifications window, select **Go to resource**
+
+![Go To Resource](https://user-images.githubusercontent.com/13558917/46316001-eb6a9180-c59c-11e8-99f3-1efee0712433.png)
 
 ## 5. Add Cognitive Services Secrets to Key Vault
 
@@ -70,6 +91,9 @@
     - **Set expiration date?** [Unchecked]
     - **Enabled?** Yes
 4. On the **Create a secret** page, select **Create**
+
+![Create Base Url Secret](https://user-images.githubusercontent.com/13558917/46315671-08529500-c59c-11e8-8c5c-087b7c6df0c2.png)
+
 5. On the **Secrets** page, select **+ Generate/Import**
 6. On the **Create a secret** page, make the following selections:
     - **Upload options**: Manual
@@ -80,9 +104,14 @@
     - **Set expiration date?** [Unchecked]
     - **Enabled?** Yes
 7. On the **Create a secret** page, select **Create**
+
+![Create Api Key Secret](https://user-images.githubusercontent.com/13558917/46315670-08529500-c59c-11e8-8d74-2c2627e0e2c8.png)
+
 8. On the **Key Vault** resource page, select **Overview**
 9. On the **Key Vault Overview** page, locate the **DNS name**
 10. Copy down the value of **DNS name**. We will use it to connect our Key Vault to our App Service
+
+![Key Vault DNS Name](https://user-images.githubusercontent.com/13558917/46315669-08529500-c59c-11e8-91c5-446704e0f592.png)
 
 ## 6. Add Key Vault Endpoint to App Service
 
@@ -95,6 +124,8 @@
     - **Enter a name:** KeyVaultEndpoint
     - **Enter a value:** [Your Azure Key Vault DNS name]
 7. On the **Application settings** page, select **Save**
+
+![Add Application Settings](https://user-images.githubusercontent.com/13558917/46316412-1d302800-c59e-11e8-8eb8-796ea9f554c5.png)
 
 ## 7. Remove TextAnalytics Data from App Settings
 
@@ -124,3 +155,7 @@
 9. On the Reviews page, enter a neutral review
    - Example neutral review: "This is a big hotel"
 10. On the Review page, ensure that a neutral emoji appears
+
+## 9. Add Authentication
+
+_tbd_
