@@ -178,10 +178,13 @@
 
 ![Microsoft App Setup](https://user-images.githubusercontent.com/13558917/46318735-85ced300-c5a5-11e8-9f5b-dd365f0b5ee3.png)
 
-9. On the **How to configure your App Service application to use Microsoft Account login** page, click **[My Applications](http://go.microsoft.com/fwlink/p/?LinkId=262039)**
+9. On the **How to configure your App Service application to use Microsoft Account login** page, click **[My Applications]
+
+![My Application](https://user-images.githubusercontent.com/13558917/46318734-85ced300-c5a5-11e8-9512-f105e11e71a5.png)
+
 10. On the **Application Registration Portal**, login with your Microsoft username/password
 
-![Application Registration Portal Login](https://user-images.githubusercontent.com/13558917/46318734-85ced300-c5a5-11e8-9512-f105e11e71a5.png)
+![App Registration Portal Login](https://user-images.githubusercontent.com/13558917/46318743-86676980-c5a5-11e8-8843-e6d492dda7a3.png)
 
 11. On the **My applications** page, select **Add an app**
 
@@ -190,7 +193,7 @@
 12. On the **Register applications** page, create a name for your app
 13. On the **Register applications** page, select **Create**
 
-![Register you application](https://user-images.githubusercontent.com/13558917/46318742-86676980-c5a5-11e8-8086-e08f0033d377.png)
+![Register you application](https://user-images.githubusercontent.com/13558917/46318741-86676980-c5a5-11e8-9963-408b8aeaebd8.png)
 
 14. On the **App Registration** page, select **Generate New Password**
 
