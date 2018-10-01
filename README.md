@@ -45,11 +45,11 @@ This is a general overview of the workshop agenda.
 * Walkthrough an example DevOps pipeline
     * Doesn't need to be a hands-on lab
 
-### 6 - [Cognitive Services](/labs/06-cognitive_services.md) ([Brandon Minnick](https://twitter.com/TheCodeTraveler))
+### [6 - Cognitive Services](/labs/06-cognitive_services.md) ([Brandon Minnick](https://twitter.com/TheCodeTraveler))
 
 In this section we will add Sentiment Analysis to the reviews for our Hotels 360 app. For this, we will be leveraging the [Text Analytics API hosted by Cognitive Services](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=TechBash-github-bramin)
 
-### 7 - [Azure Security](/labs/07-azure_security.md) ([Brandon Minnick](https://twitter.com/TheCodeTraveler))
+### [7 - Azure Security](/labs/07-azure_security.md) ([Brandon Minnick](https://twitter.com/TheCodeTraveler))
 
 In this section we will learn how to leverage the security tools available in Azure.
 
@@ -57,7 +57,7 @@ We'll start by learning more about [Azure Security Center](https://azure.microso
 
 Next, we'll move the secrets out our code and into [Azure Key Vault](https://azure.microsoft.com/services/key-vault/?WT.mc_id=TechBash-github-bramin). Key Vault leverages HSMs (hardware security modules) to help us avoid storing secrets in our source code.
 
-### 8 - [Azure and Mobile]((/labs/08-azure_and_mobile.md)) (Brandon)
+### [8 - Azure and Mobile]((/labs/08-azure_and_mobile.md)) (Brandon)
 
 * High level overview of how .NET developers can leverage Xamarin
 
