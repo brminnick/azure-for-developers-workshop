@@ -33,11 +33,9 @@
 3. In `appsettings.json`, enter the value of your TextAnalytics API Base url for `TextAnalyticsBaseUrl`
     - E.g. `"TextAnalyticsBaseUrl": "https://westus.api.cognitive.microsoft.com",`
     - **Note:** Do not enter the full url of the API endpoint; only provide the base url.
-
 4. In the hotelsweb solution, open `appsettings.Development.json`
 5. In `appsettings.Development.json`, enter the value of your TextAnalytics API key for `TextAnalyticsApiKey`
     - E.g. `"TextAnalyticsApiKey": "[Your Api Key]",`
-
 6. In `appsettings.Development.json`, enter the value of your TextAnalytics API Base url for `TextAnalyticsBaseUrl`
     - E.g. `"TextAnalyticsBaseUrl": "https://westus.api.cognitive.microsoft.com",`
     - **Note:** Do not enter the full url of the API endpoint; only provide the base url.
@@ -48,7 +46,6 @@
 2. On the Hotels360 website, click **Reviews** from the top menu
 3. On the Reviews page, enter a positive review
    - Example positive review: "Best hotel ever!"
-
 4. On the Review page, ensure that a happy emoji appears
 5. On the Hotels360 website, click **Reviews** from the top menu
 6. On the Reviews page, enter a negative review
@@ -58,7 +55,6 @@
 8. On the Hotels360 website, click **Reviews** from the top menu
 9. On the Reviews page, enter a neutral review
    - Example neutral review: "This is a big hotel"
-
 10. On the Review page, ensure that a neutral emoji appears
 
 ## 4. Verify Sentiment Analysis (Azure)
@@ -67,15 +63,12 @@
 2. On the Hotels360 website, click **Reviews** from the top menu
 3. On the Reviews page, enter a positive review
    - Example positive review: "Best hotel ever!"
-
 4. On the Review page, ensure that a happy emoji appears
 5. On the Hotels360 website, click **Reviews** from the top menu
 6. On the Reviews page, enter a negative review
    - Example negative review: "Terrible hotel. Will never stay here again!"
-
 7. On the Review page, ensure that a sad emoji appears
 8. On the Hotels360 website, click **Reviews** from the top menu
 9. On the Reviews page, enter a neutral review
-   - Example neutral review: "This is a big hotel"
-
+   - Example neutral review: "This is a big hotel"]
 10. On the Review page, ensure that a neutral emoji appears
