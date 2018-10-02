@@ -19,10 +19,58 @@
 1. On your machine, in Visual Studio or VSCode, create a new Azure Function app (C#).
 1. Create a queue triggered function and add the following code:
     ```csharp
-    
+    public static class Function1
+    {
+        [FunctionName("Function1")]
+        public static void Run(
+            [QueueTrigger("reviews")]string myQueueItem, 
+            [Table("reviews")] out Review review, 
+            ILogger log)
+        {
+            log.LogInformation($"C# Queue trigger function processed: {myQueueItem}");
+            review = new Review
+            {
+                PartitionKey = "review",
+                RowKey = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds().ToString(),
+                Text = myQueueItem
+            };
+        }
+    }
     ```
-1. Create an HTTP triggered function and add the following code:
+    Also add a new class named `Review`:
     ```csharp
-
+    public class Review : TableEntity
+    {
+        public string Text { get; set; }
+    }
+    ```
+1. Create a `local.settings.json` file with the following content:
+    ```json
+    {
+      "IsEncrypted": false,
+      "Values": {
+        "AzureWebJobsStorage": "<function app storage connection string>",
+        "FUNCTIONS_WORKER_RUNTIME": "dotnet"
+      },
+      "Host": {
+        "LocalHttpPort": 7071,
+        "CORS": "*"
+      }
+    }
+    ```
+1. Create an HTTP triggered function named `GetReviews` and add the following code:
+    ```csharp
+    public static class GetReviews
+    {
+        [FunctionName("GetReviews")]
+        public static async Task<IActionResult> Run(
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)]HttpRequest req, 
+            [Table("reviews")] CloudTable reviews,
+            ILogger log)
+        {
+            var items = await reviews.ExecuteQuerySegmentedAsync(new TableQuery<Review>(), null);
+            return new OkObjectResult(items.Results.ToList());
+        }
+    }
     ```
 
