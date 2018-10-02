@@ -15,11 +15,9 @@ The Azure cloud is huge (so that’s why they call it the cloud!) and the vast s
 
 ### [1 - Intro to Azure](./presentation/01-Intro.pptx) ([Jeremy Likness](https://twitter.com/jeremylikness))
 
-* Getting started: signup/credits
-* Computing types
-* Docs
-* Portal
-* Cloud shell
+Let's start by learning the Azure basics!
+
+We'll start by showing the [different resources available in Azure](https://azure.microsoft.com/resources/?WT.mc_id=TechBash-github-bramin), then demonstrate how to access them via the [Azure Portal](https://azure.microsoft.com/features/azure-portal/?WT.mc_id=TechBash-github-bramin) and the [Azure Cloud Shell](https://azure.microsoft.com/features/cloud-shell/?WT.mc_id=TechBash-github-bramin).
 
 ### [2 - Azure Storage](./presentation/02-Intro.pptx) ([Jeremy Likness](https://twitter.com/jeremylikness))
 
