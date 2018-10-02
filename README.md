@@ -13,7 +13,7 @@ The Azure cloud is huge (so that’s why they call it the cloud!) and the vast s
 
 ## Agenda
 
-### 1 - Intro to Azure ([Jeremy Likness](https://twitter.com/jeremylikness))
+### [1 - Intro to Azure](./presentation/01-Intro.pptx) ([Jeremy Likness](https://twitter.com/jeremylikness))
 
 * Getting started: signup/credits
 * Computing types
@@ -21,32 +21,27 @@ The Azure cloud is huge (so that’s why they call it the cloud!) and the vast s
 * Portal
 * Cloud shell
 
-[View Module](./presentation/01-Intro.pptx)
-
-### 2 - Azure Storage (Jeremy)
+### [2 - Azure Storage](./presentation/02-Intro.pptx) ([Jeremy Likness](https://twitter.com/jeremylikness))
 
 * Storage accounts
 * Blobs
 * Files
 
-[View Module](./presentation/02-Intro.pptx)
-
-### 3 - Hosting in Azure ([Anthony Chu](https://twitter.com/@anthonychu))
+### [3 - Hosting in Azure](labs/03-hosting.md) ([Anthony Chu](https://twitter.com/@anthonychu))
 
 * Hosting options
 * Deploy to App Service
 * App Insights
 
-### 4 - Azure Serverless (Anthony)
+### [4 - Azure Serverless](labs/04-serverless.md) ([Anthony Chu](https://twitter.com/@anthonychu))
 
 * Intro to serverless
 * Overview of serverless in Azure
 * Lab
 
-### 5 - DevOps (Anthony)
+### 5 - DevOps ([Anthony Chu](https://twitter.com/@anthonychu))
 
-* Walkthrough an example DevOps pipeline
-    * Doesn't need to be a hands-on lab
+Sit back and relax while we show how to create a DevOps pipeline
 
 ### [6 - Cognitive Services](/labs/06-cognitive_services.md) ([Brandon Minnick](https://twitter.com/TheCodeTraveler))
 
