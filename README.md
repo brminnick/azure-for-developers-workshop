@@ -1,14 +1,17 @@
-# azure-for-developers-workshop
+# Azure For Developers Workshop
 
-## TODO
+The Azure cloud is huge (so that’s why they call it the cloud!) and the vast service catalog may appear daunting at first. It doesn’t have to be!
 
-* Add links to labs per section
-* Add links to presentations
-* Add links to docs relevant to outline items
+- Learn the browser-based UI of the Azure portal
+- Continue the journey with the built-in, ready-to-run cloud shell
+- Explore various ways to deploy web apps written in any language, on any platform, from virtual machines and containers to serverless technologies
+- Add intelligence to your apps using Microsoft Cognitive Services
+- Protect your apps by applying Azure’s built-in security features
+- Diagnose problems and apply automated machine learning analysis with Application Insights
+- Connect your apps with messaging services, load files into cloud storage and discover managed databases for SQL and NoSQL scenarios
+- Tie everything together in a continuous delivery pipeline with Azure DevOps projects
 
 ## Agenda
-
-This is a general overview of the workshop agenda.
 
 ### 1 - Intro to Azure ([Jeremy Likness](https://twitter.com/jeremylikness))
 
