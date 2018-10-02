@@ -13,13 +13,13 @@ The Azure cloud is huge (so that’s why they call it the cloud!) and the vast s
 
 ## Agenda
 
-### [1 - Intro to Azure](./presentation/01-Intro.pptx) ([Jeremy Likness](https://twitter.com/jeremylikness))
+### [1 - Intro to Azure](./presentation/) ([Jeremy Likness](https://twitter.com/jeremylikness))
 
 Let's start by learning the Azure basics!
 
 We'll start by showing the [different resources available in Azure](https://azure.microsoft.com/resources/?WT.mc_id=TechBash-github-bramin), then demonstrate how to access them via the [Azure Portal](https://azure.microsoft.com/features/azure-portal/?WT.mc_id=TechBash-github-bramin) and the [Azure Cloud Shell](https://azure.microsoft.com/features/cloud-shell/?WT.mc_id=TechBash-github-bramin).
 
-### [2 - Azure Storage](./presentation/02-Intro.pptx) ([Jeremy Likness](https://twitter.com/jeremylikness))
+### [2 - Azure Storage](./presentation/) ([Jeremy Likness](https://twitter.com/jeremylikness))
 
 How do you store stuff in the cloud? In this section we'll explore [Azure Storage](https://azure.microsoft.com/free/storage/?WT.mc_id=TechBash-github-bramin) options including [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/?WT.mc_id=TechBash-github-bramin) and [Azure File Storage](https://azure.microsoft.com/services/storage/files/?WT.mc_id=TechBash-github-bramin).
 
