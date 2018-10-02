@@ -37,7 +37,7 @@ Sit back and relax while we demonstrate how to create a CI/CD pipeline using [Az
 
 ### [6 - Cognitive Services](/labs/06-cognitive_services.md) ([Brandon Minnick](https://twitter.com/TheCodeTraveler))
 
-In this section we will add Sentiment Analysis to the reviews for our Hotels 360 app. For this, we will be leveraging the [Text Analytics API hosted by Cognitive Services](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=TechBash-github-bramin)
+Let's add some AI to our app! In this section we will add Sentiment Analysis to the reviews for our Hotels 360 app. For this, we will be leveraging the [Text Analytics API hosted by Cognitive Services](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=TechBash-github-bramin)
 
 ### [7 - Azure Security](/labs/07-azure_security.md) ([Brandon Minnick](https://twitter.com/TheCodeTraveler))
 
