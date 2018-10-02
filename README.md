@@ -13,33 +13,33 @@ The Azure cloud is huge (so that’s why they call it the cloud!) and the vast s
 
 ## Agenda
 
-### [1 - Intro to Azure](./presentations/) ([Jeremy Likness](https://twitter.com/jeremylikness))
+### [1 - Intro to Azure](./presentations/)
 
 Let's start by learning the Azure basics!
 
 We'll start by showing the [different resources available in Azure](https://azure.microsoft.com/resources/?WT.mc_id=TechBash-github-bramin), then demonstrate how to access them via the [Azure Portal](https://azure.microsoft.com/features/azure-portal/?WT.mc_id=TechBash-github-bramin) and the [Azure Cloud Shell](https://azure.microsoft.com/features/cloud-shell/?WT.mc_id=TechBash-github-bramin).
 
-### [2 - Azure Storage](./presentations/) ([Jeremy Likness](https://twitter.com/jeremylikness))
+### [2 - Azure Storage](./presentations/)
 
 How do you store stuff in the cloud? In this section we'll explore [Azure Storage](https://azure.microsoft.com/free/storage/?WT.mc_id=TechBash-github-bramin) options including [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/?WT.mc_id=TechBash-github-bramin) and [Azure File Storage](https://azure.microsoft.com/services/storage/files/?WT.mc_id=TechBash-github-bramin).
 
-### [3 - Hosting in Azure](labs/03-hosting.md) ([Anthony Chu](https://twitter.com/@anthonychu))
+### [3 - Hosting in Azure](labs/03-hosting.md)
 
 In this section, we'll deploy our first website to Azure using [Azure App Service](https://azure.microsoft.com/services/app-service/?WT.mc_id=TechBash-github-bramin). Then we'll connect it with [Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview/?WT.mc_id=TechBash-github-bramin) for advanced logging and rich analytics.
 
-### [4 - Azure Serverless](labs/04-serverless.md) ([Anthony Chu](https://twitter.com/@anthonychu))
+### [4 - Azure Serverless](labs/04-serverless.md)
 
 Serverless today is all the rage! In this section we'll create our first serverless workflow using [Azure Functions](https://azure.microsoft.com/services/functions/?WT.mc_id=TechBash-github-bramin).
 
-### 5 - DevOps ([Anthony Chu](https://twitter.com/@anthonychu))
+### 5 - Azure DevOps
 
 Sit back and relax while we demonstrate how to create a CI/CD pipeline using [Azure DevOps](https://azure.microsoft.com/services/devops/?WT.mc_id=TechBash-github-bramin).
 
-### [6 - Cognitive Services](/labs/06-cognitive_services.md) ([Brandon Minnick](https://twitter.com/TheCodeTraveler))
+### [6 - Cognitive Services](/labs/06-cognitive_services.md)
 
 Let's add some AI to our app! In this section we will add Sentiment Analysis to the reviews for our Hotels 360 app. For this, we will be leveraging the [Text Analytics API hosted by Cognitive Services](https://azure.microsoft.com/services/cognitive-services/text-analytics/?WT.mc_id=TechBash-github-bramin)
 
-### [7 - Azure Security](/labs/07-azure_security.md) ([Brandon Minnick](https://twitter.com/TheCodeTraveler))
+### [7 - Azure Security](/labs/07-azure_security.md)
 
 In this section we will learn how to leverage the security tools available in Azure.
 
@@ -47,7 +47,7 @@ We'll start by learning more about [Azure Security Center](https://azure.microso
 
 Next, we'll move the secrets out our code and into [Azure Key Vault](https://azure.microsoft.com/services/key-vault/?WT.mc_id=TechBash-github-bramin). Key Vault leverages HSMs (hardware security modules) to help us avoid storing secrets in our source code.
 
-### 8 - Azure and Mobile ([Brandon Minnick](https://twitter.com/TheCodeTraveler))
+### 8 - Azure + Mobile
 
 If time permits, our resident mobile app expert, Brandon, will show how we can leverage our existing .NET skills to create mobile apps with [Xamarin](https://visualstudio.microsoft.com/xamarin/?WT.mc_id=TechBash-github-bramin) and [Azure](azure.com/?WT.mc_id=TechBash-github-bramin).
 
