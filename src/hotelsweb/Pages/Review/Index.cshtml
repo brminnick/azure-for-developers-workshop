@@ -17,4 +17,39 @@
     <p></p>
     <p>@Model.ReviewResponse</p>
     <h1 class="display-4">@Model.SentimentEmoji</h1>
+
 </div>
+<div id="reviews-div" class="reviews-hidden">
+    <hr />
+    <ul id="reviews"></ul>
+</div>
+
+@section Scripts {
+<script>
+    const reviewsUrl = "@Model.ReviewsUrl";
+    if (reviewsUrl) {
+        const reviewsDiv = document.getElementById('reviews-div');
+        reviewsDiv.classList.remove('reviews-hidden');
+
+        fetch(reviewsUrl)
+            .then(function(response) {
+                response.json().then(function(reviews) {
+                    const reviewsUl = document.getElementById('reviews');
+                    for (var review of reviews) {
+                        const li = document.createElement('li');
+                        li.textContent = review.text;
+                        reviewsUl.appendChild(li);
+                    }
+                });
+            });
+    }
+</script>
+}
+
+@section Head {
+    <style>
+        .reviews-hidden {
+            display: hidden;
+        }
+    </style>
+}

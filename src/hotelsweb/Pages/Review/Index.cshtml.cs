@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using hotelsweb.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace hotelsweb.Pages.Review
@@ -12,20 +13,26 @@ namespace hotelsweb.Pages.Review
         private readonly ReviewsService _reviewsService;
         private readonly TextAnalysisService _textAnalysisService;
         private readonly ILogger _logger;
+        private readonly IConfiguration _config;
 
         public IndexModel(TextAnalysisService textAnalysisService,
             ReviewsService reviewsService,
-            ILogger<IndexModel> logger)
+            ILogger<IndexModel> logger,
+            IConfiguration config)
         {
             _reviewsService = reviewsService;
             _textAnalysisService = textAnalysisService;
             _logger = logger;
+            _config = config;
+
+            ReviewsUrl = _config["Reviews:Url"];
         }
 
         [BindProperty]
         public string ReviewText { get; set; }
         public string SentimentEmoji { get; set; }
         public string ReviewResponse { get; set; }
+        public string ReviewsUrl { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
