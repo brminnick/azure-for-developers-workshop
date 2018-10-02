@@ -21,9 +21,7 @@ We'll start by showing the [different resources available in Azure](https://azur
 
 ### [2 - Azure Storage](./presentation/02-Intro.pptx) ([Jeremy Likness](https://twitter.com/jeremylikness))
 
-* Storage accounts
-* Blobs
-* Files
+How do you store stuff in the cloud? In this section we'll explore [Azure Storage](https://azure.microsoft.com/free/storage/?WT.mc_id=TechBash-github-bramin) options including [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/?WT.mc_id=TechBash-github-bramin) and [Azure File Storage](https://azure.microsoft.com/services/storage/files/?WT.mc_id=TechBash-github-bramin).
 
 ### [3 - Hosting in Azure](labs/03-hosting.md) ([Anthony Chu](https://twitter.com/@anthonychu))
 
@@ -53,8 +51,8 @@ We'll start by learning more about [Azure Security Center](https://azure.microso
 
 Next, we'll move the secrets out our code and into [Azure Key Vault](https://azure.microsoft.com/services/key-vault/?WT.mc_id=TechBash-github-bramin). Key Vault leverages HSMs (hardware security modules) to help us avoid storing secrets in our source code.
 
-### [8 - Azure and Mobile]((/labs/08-azure_and_mobile.md)) (Brandon)
+### [8 - Azure and Mobile]((/labs/08-azure_and_mobile.md)) ([Brandon Minnick](https://twitter.com/TheCodeTraveler))
 
-* High level overview of how .NET developers can leverage Xamarin
+If time permits, our resident mobile app expert, Brandon, will show how we can leverage our existing .NET skills to create mobile apps with [Xamarin](https://visualstudio.microsoft.com/xamarin/?WT.mc_id=TechBash-github-bramin) and [Azure](azure.com/?WT.mc_id=TechBash-github-bramin).
 
 ### Conclusion (Team)
