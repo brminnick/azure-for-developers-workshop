@@ -25,10 +25,6 @@ How do you store stuff in the cloud? In this section we'll explore [Azure Storag
 
 ### [3 - Hosting in Azure](labs/03-hosting.md) ([Anthony Chu](https://twitter.com/@anthonychu))
 
-* Hosting options
-* Deploy to App Service
-* App Insights
-
 In this section, we'll deploy our first website to Azure using [Azure App Service](https://azure.microsoft.com/services/app-service/?WT.mc_id=TechBash-github-bramin). Then we'll connect it with [Azure App Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview/?WT.mc_id=TechBash-github-bramin) for advanced logging and rich analytics.
 
 ### [4 - Azure Serverless](labs/04-serverless.md) ([Anthony Chu](https://twitter.com/@anthonychu))
