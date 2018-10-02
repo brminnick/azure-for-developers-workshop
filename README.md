@@ -29,15 +29,15 @@ How do you store stuff in the cloud? In this section we'll explore [Azure Storag
 * Deploy to App Service
 * App Insights
 
+In this section, we'll deploy our first website to Azure using [Azure App Service](https://azure.microsoft.com/services/app-service/?WT.mc_id=TechBash-github-bramin). Then we'll connect it with [Azure App Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview/?WT.mc_id=TechBash-github-bramin) for advanced logging and rich analytics.
+
 ### [4 - Azure Serverless](labs/04-serverless.md) ([Anthony Chu](https://twitter.com/@anthonychu))
 
-* Intro to serverless
-* Overview of serverless in Azure
-* Lab
+Serverless today is all the rage! In this section we'll create our first serverless workflow using [Azure Functions](https://azure.microsoft.com/en-us/services/functions/?WT.mc_id=TechBash-github-bramin).
 
 ### 5 - DevOps ([Anthony Chu](https://twitter.com/@anthonychu))
 
-Sit back and relax while we show how to create a DevOps pipeline
+Sit back and relax while we demonstrate how to create a CI/CD pipeline using [Azure Devops](https://azure.microsoft.com/services/devops/?WT.mc_id=TechBash-github-bramin).
 
 ### [6 - Cognitive Services](/labs/06-cognitive_services.md) ([Brandon Minnick](https://twitter.com/TheCodeTraveler))
 
