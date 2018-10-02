@@ -56,5 +56,3 @@ Next, we'll move the secrets out our code and into [Azure Key Vault](https://azu
 If time permits, our resident mobile app expert, Brandon, will show how we can leverage our existing .NET skills to create mobile apps with [Xamarin](https://visualstudio.microsoft.com/xamarin/?WT.mc_id=TechBash-github-bramin) and [Azure](azure.com/?WT.mc_id=TechBash-github-bramin).
 
 Sit back, releax and enjoy!
-
-### Conclusion (Team)
