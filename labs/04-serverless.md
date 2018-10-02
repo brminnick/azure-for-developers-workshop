@@ -73,4 +73,8 @@
         }
     }
     ```
-
+1. Update the hotels web app's application settings to add the following:
+    * `Reviews__Url` - `https://<functionapp-name>/api/GetReviews`
+    * `Reviews__StorageConnectionString` - Storage connection string from above
+1. Run the function app locally. Adding a review to the web app should cause the queue triggered function to execute.
+1. Publish the app to the previously created function app instance on Azure.
