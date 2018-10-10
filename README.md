@@ -45,7 +45,7 @@ In this section we will learn how to leverage the security tools available in Az
 
 We'll start by learning more about [Azure Security Center](https://azure.microsoft.com/services/security-center/?WT.mc_id=TechBash-github-bramin) and how to leverage its recommendations to add extra layers of security to our app service.
 
-Next, we'll move the secrets out our code and into [Azure Key Vault](https://azure.microsoft.com/services/key-vault/?WT.mc_id=TechBash-github-bramin). Key Vault leverages HSMs (hardware security modules) to help us avoid storing secrets in our source code.
+Next, we'll move the secrets out our code and into [Azure Key Vault](https://azure.microsoft.com/services/key-vault/?WT.mc_id=TechBash-github-bramin). Key Vault leverages HSMs ([hardware security modules](https://en.wikipedia.org/wiki/Hardware_security_module)) to help us avoid storing secrets in our source code.
 
 ### 8 - Azure + Mobile
 
