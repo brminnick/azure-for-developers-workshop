@@ -2,7 +2,7 @@
 
 ## 1. Create Azure TextAnalytics Resource
 
-1. Navigate to the [Azure Portal](https://portal.azure.com/?WT.mc_id=TechBash-github-bramin)
+1. Navigate to the [Azure Portal](https://portal.azure.com/?WT.mc_id=AzureForDevelopersWorkshop-github-bramin)
 2. On the Azure Portal, select **+Create a Resource**
 3. In the **New** window, select **AI + Machine Learning**
 4. In the **Featured** frame, select **Text Analytics**
