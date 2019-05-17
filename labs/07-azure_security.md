@@ -3,15 +3,15 @@
 ## 1. Microsoft Learn Security Module
 
 1. Click this link to navigate to the Microsoft Learn Security Module: 
-    - [**Top 5 security items to consider before pushing to production**](https://docs.microsoft.com/learn/modules/top-5-security-items-to-consider/?WT.mc_id=TechBash-github-bramin)
+    - [**Top 5 security items to consider before pushing to production**](https://docs.microsoft.com/learn/modules/top-5-security-items-to-consider/?WT.mc_id=AzureForDevelopersWorkshop-github-bramin)
 2. (Optional) On the **Microsoft Learn** page, sign into your Azure account
-    - [Microsoft Learn](https://docs.microsoft.com/learn/?WT.mc_id=TechBash-github-bramin) offers badges and points for completing modules
+    - [Microsoft Learn](https://docs.microsoft.com/learn/?WT.mc_id=AzureForDevelopersWorkshop-github-bramin) offers badges and points for completing modules
 3. On the **Microsoft Learn** page, select **Start**
 4. Complete the security module
 
 ## 2. Azure Security Center
 
-1. Navigate to the [Azure Portal](https://portal.azure.com/?WT.mc_id=TechBash-github-bramin)
+1. Navigate to the [Azure Portal](https://portal.azure.com/?WT.mc_id=AzureForDevelopersWorkshop-github-bramin)
 2. On the Azure Portal, on the left-hand menu, select **Al services**
 3. In the **All services** window, in the **Filter** bar at the top, type **Security**
 4. In the **All services** window, select **Security Center**
@@ -25,7 +25,7 @@
 
 ## 3. Enable App Service Managed Service Identity
 
-1. Navigate to the [Azure Portal](https://portal.azure.com/?WT.mc_id=TechBash-github-bramin)
+1. Navigate to the [Azure Portal](https://portal.azure.com/?WT.mc_id=AzureForDevelopersWorkshop-github-bramin)
 2. On the Azure Portal, navigate to your App Service resource
 3. On the App Service Overview page, on the left-hand menu, select **Managed service identity**
 4. On the **Managed service identity** page, select **On**
@@ -35,7 +35,7 @@
 
 ## 4. Create Azure Key Vault Resource
 
-1. Navigate to the [Azure Portal](https://portal.azure.com/?WT.mc_id=TechBash-github-bramin)
+1. Navigate to the [Azure Portal](https://portal.azure.com/?WT.mc_id=AzureForDevelopersWorkshop-github-bramin)
 2. In the Azure Portal, select **+Create a Resource**
 3. In the **New** window, type **Key Vault** into the search bar
 
@@ -113,7 +113,7 @@
 
 ## 6. Add Key Vault Endpoint to App Service
 
-1. Navigate to the [Azure Portal](https://portal.azure.com/?WT.mc_id=TechBash-github-bramin)
+1. Navigate to the [Azure Portal](https://portal.azure.com/?WT.mc_id=AzureForDevelopersWorkshop-github-bramin)
 2. On the Azure Portal, navigate to your App Service resource
 3. On the **App Services Overview** page, on the left-hand menu, select **Application settings**
 4. In **Application settings**, scroll down to the **Application settings** section
@@ -156,7 +156,7 @@
 
 ## 9. Add Authentication
 
-1. Navigate to the [Azure Portal](https://portal.azure.com/?WT.mc_id=TechBash-github-bramin)
+1. Navigate to the [Azure Portal](https://portal.azure.com/?WT.mc_id=AzureForDevelopersWorkshop-github-bramin)
 2. On the Azure Portal, navigate to your App Service resource
 3. On the **App Services Overview** page, locate the App Service URL
     - We will use this URL later
